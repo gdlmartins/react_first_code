@@ -1,7 +1,7 @@
 import Expense from "./components/Expenses/Expense";
 import NewExpense from "./components/NewExpense/NewExpense";
 
-function App() {
+const App = () => {
   const addExpenseHandler = (expense) => {
     const expenseData = {
       ...expense,
@@ -32,9 +32,9 @@ function App() {
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
-      <Expense expenses={expenses} />
+      <Expense expense={expenses} />
     </div>
   );
-}
+};
 
 export default App;
